@@ -14,6 +14,7 @@ public class P01_Login {
     private final By emailField = By.name("email");
     private final By loginButtonField = By.cssSelector("input[id='continue']");
     private final By errorMessageField = By.cssSelector("span[class='a-list-item']");
+    private final By signInTextField = By.className("a-spacing-small");
 
     public WebElement email (){
         return driver.findElement(emailField);
@@ -25,5 +26,9 @@ public class P01_Login {
 
     public String errorMessage (){
         return driver.findElement(errorMessageField).getText();
+    }
+
+    public String signInText (){
+        return driver.findElement(signInTextField).getText();
     }
 }

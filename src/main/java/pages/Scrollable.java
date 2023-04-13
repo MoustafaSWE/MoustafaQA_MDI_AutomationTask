@@ -26,4 +26,8 @@ public class Scrollable {
                 .until(ExpectedConditions.visibilityOfElementLocated(priceField));
         js.executeScript("arguments[0].scrollIntoView();",element );
     }
+
+    public void navigateBack (){
+        driver.navigate().back();
+    }
 }
